@@ -1,0 +1,10 @@
+## Basic commandline usage for ancestral character reconstruction on HIV phylogenetic trees with PastML
+#load python through anaconda3, that has pastML installed
+module load anaconda3/4.4.0
+
+# Input for PastML: rooted tree in newick format and metadatafile  
+workdir= # Path of working directory
+tree= # Path of rooted tree file in newick format
+data= # Path of metadata file
+
+pastml --tree ${tree} --data ${data} --data_sep , --columns <metadata header name> --name_column <metadata header name> --html_compressed ${tree}_map.html --work_dir $workdir --verbose --html ${tree}_tree.html
